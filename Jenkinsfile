@@ -6,5 +6,10 @@ pipeline {
                 echo 'Jenkinsfile is working!'
             }
         }
+        stage('Build') {
+            steps {
+                echo 'Building...'
+            }
+        }
     }
 }
