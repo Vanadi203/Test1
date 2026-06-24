@@ -24,10 +24,10 @@ pipeline {
     }
     post {
         success {
-             githubNotify context: 'jenkins-ci', status: 'SUCCESS'
+             setGitHubPullRequestStatus state: 'SUCCESS'
         }
         failure {
-             githubNotify context: 'jenkins-ci', status: 'FAILURE'
+             setGitHubPullRequestStatus state: 'FAILURE'
         }
     }
 }
