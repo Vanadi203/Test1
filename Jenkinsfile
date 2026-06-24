@@ -21,5 +21,17 @@ pipeline {
                 echo 'Deploying...'
             }
         }
+        
+    }
+    post {
+        success {
+            echo "Build passed! Commit is good."
+        }
+        failure {
+            echo "Build failed at stage — check the logs above."
+        }
+        always {
+            cleanWs()
+        }
     }
 }
