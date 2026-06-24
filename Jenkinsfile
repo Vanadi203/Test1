@@ -24,7 +24,7 @@ pipeline {
     }
     post {
         failure {
-            setGitHubPullRequestStatus state: 'FAILURE'
+            githubNotify context: 'jenkins-ci', status: 'FAILURE'
         }
     }
 }
