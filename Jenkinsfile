@@ -22,4 +22,9 @@ pipeline {
             }
         }
     }
+    post {
+        failure {
+            setGitHubPullRequestStatus state: 'FAILURE'
+        }
+    }
 }
