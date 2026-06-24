@@ -22,12 +22,4 @@ pipeline {
             }
         }
     }
-    // post {
-    //     success {
-    //          setGitHubPullRequestStatus state: 'SUCCESS'
-    //     }
-    //     failure {
-    //          setGitHubPullRequestStatus state: 'FAILURE'
-    //     }
-    // }
 }
