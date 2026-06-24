@@ -3,6 +3,7 @@ pipeline {
     stages {
         stage('Hello') {
             steps {
+                githubNotify context: 'jenkins-ci', status: 'FAILURE'
                 echo 'Jenkinsfile is working!'
             }
         }
